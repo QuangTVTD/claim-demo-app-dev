@@ -1,18 +1,25 @@
-provider "aws" {
-region = "us-east-1"
-}
-resource "aws_s3_bucket" "terraform_state_bucket" {
-  bucket = "your-terraform-state-bucket-name"
-  tags = {
-    Name        = "Playing with Terraform"
-    Environment = "dev"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.27"
+    }
   }
+
+  required_version = ">= 0.14.9"
 }
 
-resource "aws_s3_bucket" "terraform_state_bucket-1" {
-  bucket = "your-terraform-state-bucket-name-1"
+#Provider profile and region in which all the resources will create
+provider "aws" {
+  profile = "default"
+  region  = "ap-south-1"
+}
+
+#Resource to create s3 bucket
+resource "aws_s3_bucket" "demo-bucket"{
+  bucket = "ck-demo-bucket"
+
   tags = {
-    Name        = "Playing with Terraform"
-    Environment = "dev"
+    Name = "S3Bucket"
   }
 }
