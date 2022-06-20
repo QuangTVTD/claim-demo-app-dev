@@ -24,3 +24,12 @@ resource "aws_s3_bucket" "terraform_state_bucket"{
     Environment = "dev"
   }
 }
+
+resource "aws_s3_bucket" "terraform_state_bucket2"{
+  bucket = "quangtv-s3-2"
+
+  tags = {
+    Name = "S3Bucket"
+    Environment = "dev"
+  }
+}
