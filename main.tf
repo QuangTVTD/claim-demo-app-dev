@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 #Resource to create s3 bucket
-resource "aws_s3_bucket" "demo-bucket"{
+resource "aws_s3_bucket" "terraform-s3-demo-1"{
   bucket = "ck-demo-bucket"
 
   tags = {
