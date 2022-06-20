@@ -5,8 +5,7 @@ phases:
   install:
     commands:
       - "apt install unzip -y"
-      - "wget 
-https://releases.hashicorp.com/terraform/0.14.10/terraform_0.14.10_linux_amd64.zip"
+      - "wget https://releases.hashicorp.com/terraform/0.14.10/terraform_0.14.10_linux_amd64.zip"
       - "unzip terraform_0.14.10_linux_amd64.zip"
       - "mv terraform /usr/local/bin/"
   pre_build:
@@ -16,8 +15,9 @@ https://releases.hashicorp.com/terraform/0.14.10/terraform_0.14.10_linux_amd64.z
   build:
     commands:
       - terraform plan -input=false -no-color
+      - terraform apply -input=false -auto-approve
 
   post_build:
     commands:
-      - echo terraform plan completed on `date`
+      - echo terraform completed on `date`
       
