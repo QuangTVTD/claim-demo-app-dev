@@ -17,7 +17,7 @@ provider "aws" {
 
 #Resource to create s3 bucket
 resource "aws_s3_bucket" "terraform_state_bucket"{
-  bucket = "ck-demo-bucket"
+  bucket = "quangtv-s3-1"
 
   tags = {
     Name = "S3Bucket"
