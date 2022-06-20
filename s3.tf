@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "terraform_state_bucket" {
   } 
 }
 
-resource "aws_s3_bucket" "terraform_state_bucket" { 
+resource "aws_s3_bucket" "terraform_state_bucket1" { 
   bucket = "quangtv-s3-12" 
   tags = { 
     Name = "S3Bucket" 
