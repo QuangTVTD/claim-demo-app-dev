@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "terraform_state_bucket" {
   }
 }
 
-resource "aws_s3_bucket" "terraform_state_bucket" {
+resource "aws_s3_bucket" "terraform_state_bucket-1" {
   bucket = "your-terraform-state-bucket-name-1"
   tags = {
     Name        = "Playing with Terraform"
