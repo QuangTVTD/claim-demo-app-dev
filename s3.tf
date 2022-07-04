@@ -14,3 +14,10 @@ resource "aws_s3_bucket" "terraform_state_bucket1" {
     Environment = "dev" 
   } 
 }
+resource "aws_s3_bucket" "terraform_state_bucket11" { 
+  bucket = "quangtv-s3-121" 
+  tags = { 
+    Name = "S3Bucket" 
+    Environment = "dev" 
+  } 
+}
